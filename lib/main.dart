@@ -25,7 +25,7 @@ void main() {
             ),
           ],
         ),
-        body: Image.asset('images/flutter.png'),
+        body: Center(child: Text('This is a app body')),
       ),
     ),
   );
