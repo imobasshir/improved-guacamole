@@ -25,7 +25,17 @@ void main() {
             ),
           ],
         ),
-        body: Center(child: Text('This is a app body')),
+        body: Center(
+          child: Image(
+            image: AssetImage('images/flutter.png'),
+          ),
+        ),
+        bottomNavigationBar: BottomAppBar(
+          child: Container(
+            height: 50.0,
+            color: Colors.blueAccent,
+          ),
+        ),
       ),
     ),
   );
