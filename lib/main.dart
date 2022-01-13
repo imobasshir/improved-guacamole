@@ -25,6 +25,7 @@ void main() {
             ),
           ],
         ),
+        body: Image.asset('images/flutter.png'),
       ),
     ),
   );
