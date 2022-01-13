@@ -25,10 +25,21 @@ class MyApp extends StatelessWidget {
             ),
           ],
         ),
-        body: Center(
-          child: Image(
-            image: AssetImage('images/flutter.png'),
+        backgroundColor: Colors.amber,
+        body: Container(
+          padding: EdgeInsets.all(10.0),
+          margin: EdgeInsets.all(10.0),
+          child: Text(
+            'Hello',
+            style: TextStyle(
+              fontSize: 30,
+              fontWeight: FontWeight.w300,
+              fontStyle: FontStyle.italic,
+            ),
           ),
+          color: Colors.white,
+          height: 50.0,
+          width: double.infinity,
         ),
       ),
     );
