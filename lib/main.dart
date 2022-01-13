@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(
-    MaterialApp(
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
           leading: IconButton(
@@ -10,18 +17,11 @@ void main() {
             tooltip: 'Menu',
             icon: Icon(Icons.menu),
           ),
-          title: Text('AppBar Demo'),
-          backgroundColor: Colors.blueAccent,
+          title: Text('App Bar'),
           actions: <Widget>[
             IconButton(
               onPressed: null,
-              icon: Icon(Icons.favorite),
-              tooltip: 'Favoraite',
-            ),
-            IconButton(
-              onPressed: null,
               icon: Icon(Icons.search_rounded),
-              tooltip: 'Search',
             ),
           ],
         ),
@@ -30,13 +30,7 @@ void main() {
             image: AssetImage('images/flutter.png'),
           ),
         ),
-        bottomNavigationBar: BottomAppBar(
-          child: Container(
-            height: 50.0,
-            color: Colors.blueAccent,
-          ),
-        ),
       ),
-    ),
-  );
+    );
+  }
 }
