@@ -11,376 +11,378 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: GridView.count(
-          crossAxisCount: 4,
-          crossAxisSpacing: 1.5,
-          mainAxisSpacing: 1.0,
-          children: [
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.grey,
-                  style: BorderStyle.solid,
-                  width: 2.0,
+        body: SafeArea(
+          child: GridView.extent(
+            maxCrossAxisExtent: 150,
+            crossAxisSpacing: 1.5,
+            mainAxisSpacing: 1.0,
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.grey,
+                    style: BorderStyle.solid,
+                    width: 2.0,
+                  ),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(4),
+                  ),
                 ),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(4),
-                ),
+                child: Image.asset('images/flutter.png'),
               ),
-              child: Image.asset('images/flutter.png'),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.grey,
-                  style: BorderStyle.solid,
-                  width: 2.0,
+              Container(
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.grey,
+                    style: BorderStyle.solid,
+                    width: 2.0,
+                  ),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(4),
+                  ),
                 ),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(4),
-                ),
+                child: Image.asset('images/flutter.png'),
               ),
-              child: Image.asset('images/flutter.png'),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.grey,
-                  style: BorderStyle.solid,
-                  width: 2.0,
+              Container(
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.grey,
+                    style: BorderStyle.solid,
+                    width: 2.0,
+                  ),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(4),
+                  ),
                 ),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(4),
-                ),
+                child: Image.asset('images/flutter.png'),
               ),
-              child: Image.asset('images/flutter.png'),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.grey,
-                  style: BorderStyle.solid,
-                  width: 2.0,
+              Container(
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.grey,
+                    style: BorderStyle.solid,
+                    width: 2.0,
+                  ),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(4),
+                  ),
                 ),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(4),
-                ),
+                child: Image.asset('images/flutter.png'),
               ),
-              child: Image.asset('images/flutter.png'),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.grey,
-                  style: BorderStyle.solid,
-                  width: 2.0,
+              Container(
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.grey,
+                    style: BorderStyle.solid,
+                    width: 2.0,
+                  ),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(4),
+                  ),
                 ),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(4),
-                ),
+                child: Image.asset('images/flutter.png'),
               ),
-              child: Image.asset('images/flutter.png'),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.grey,
-                  style: BorderStyle.solid,
-                  width: 2.0,
+              Container(
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.grey,
+                    style: BorderStyle.solid,
+                    width: 2.0,
+                  ),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(4),
+                  ),
                 ),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(4),
-                ),
+                child: Image.asset('images/flutter.png'),
               ),
-              child: Image.asset('images/flutter.png'),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.grey,
-                  style: BorderStyle.solid,
-                  width: 2.0,
+              Container(
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.grey,
+                    style: BorderStyle.solid,
+                    width: 2.0,
+                  ),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(4),
+                  ),
                 ),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(4),
-                ),
+                child: Image.asset('images/flutter.png'),
               ),
-              child: Image.asset('images/flutter.png'),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.grey,
-                  style: BorderStyle.solid,
-                  width: 2.0,
+              Container(
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.grey,
+                    style: BorderStyle.solid,
+                    width: 2.0,
+                  ),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(4),
+                  ),
                 ),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(4),
-                ),
+                child: Image.asset('images/flutter.png'),
               ),
-              child: Image.asset('images/flutter.png'),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.grey,
-                  style: BorderStyle.solid,
-                  width: 2.0,
+              Container(
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.grey,
+                    style: BorderStyle.solid,
+                    width: 2.0,
+                  ),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(4),
+                  ),
                 ),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(4),
-                ),
+                child: Image.asset('images/flutter.png'),
               ),
-              child: Image.asset('images/flutter.png'),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.grey,
-                  style: BorderStyle.solid,
-                  width: 2.0,
+              Container(
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.grey,
+                    style: BorderStyle.solid,
+                    width: 2.0,
+                  ),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(4),
+                  ),
                 ),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(4),
-                ),
+                child: Image.asset('images/flutter.png'),
               ),
-              child: Image.asset('images/flutter.png'),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.grey,
-                  style: BorderStyle.solid,
-                  width: 2.0,
+              Container(
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.grey,
+                    style: BorderStyle.solid,
+                    width: 2.0,
+                  ),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(4),
+                  ),
                 ),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(4),
-                ),
+                child: Image.asset('images/flutter.png'),
               ),
-              child: Image.asset('images/flutter.png'),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.grey,
-                  style: BorderStyle.solid,
-                  width: 2.0,
+              Container(
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.grey,
+                    style: BorderStyle.solid,
+                    width: 2.0,
+                  ),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(4),
+                  ),
                 ),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(4),
-                ),
+                child: Image.asset('images/flutter.png'),
               ),
-              child: Image.asset('images/flutter.png'),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.grey,
-                  style: BorderStyle.solid,
-                  width: 2.0,
+              Container(
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.grey,
+                    style: BorderStyle.solid,
+                    width: 2.0,
+                  ),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(4),
+                  ),
                 ),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(4),
-                ),
+                child: Image.asset('images/flutter.png'),
               ),
-              child: Image.asset('images/flutter.png'),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.grey,
-                  style: BorderStyle.solid,
-                  width: 2.0,
+              Container(
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.grey,
+                    style: BorderStyle.solid,
+                    width: 2.0,
+                  ),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(4),
+                  ),
                 ),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(4),
-                ),
+                child: Image.asset('images/flutter.png'),
               ),
-              child: Image.asset('images/flutter.png'),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.grey,
-                  style: BorderStyle.solid,
-                  width: 2.0,
+              Container(
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.grey,
+                    style: BorderStyle.solid,
+                    width: 2.0,
+                  ),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(4),
+                  ),
                 ),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(4),
-                ),
+                child: Image.asset('images/flutter.png'),
               ),
-              child: Image.asset('images/flutter.png'),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.grey,
-                  style: BorderStyle.solid,
-                  width: 2.0,
+              Container(
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.grey,
+                    style: BorderStyle.solid,
+                    width: 2.0,
+                  ),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(4),
+                  ),
                 ),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(4),
-                ),
+                child: Image.asset('images/flutter.png'),
               ),
-              child: Image.asset('images/flutter.png'),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.grey,
-                  style: BorderStyle.solid,
-                  width: 2.0,
+              Container(
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.grey,
+                    style: BorderStyle.solid,
+                    width: 2.0,
+                  ),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(4),
+                  ),
                 ),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(4),
-                ),
+                child: Image.asset('images/flutter.png'),
               ),
-              child: Image.asset('images/flutter.png'),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.grey,
-                  style: BorderStyle.solid,
-                  width: 2.0,
+              Container(
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.grey,
+                    style: BorderStyle.solid,
+                    width: 2.0,
+                  ),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(4),
+                  ),
                 ),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(4),
-                ),
+                child: Image.asset('images/flutter.png'),
               ),
-              child: Image.asset('images/flutter.png'),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.grey,
-                  style: BorderStyle.solid,
-                  width: 2.0,
+              Container(
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.grey,
+                    style: BorderStyle.solid,
+                    width: 2.0,
+                  ),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(4),
+                  ),
                 ),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(4),
-                ),
+                child: Image.asset('images/flutter.png'),
               ),
-              child: Image.asset('images/flutter.png'),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.grey,
-                  style: BorderStyle.solid,
-                  width: 2.0,
+              Container(
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.grey,
+                    style: BorderStyle.solid,
+                    width: 2.0,
+                  ),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(4),
+                  ),
                 ),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(4),
-                ),
+                child: Image.asset('images/flutter.png'),
               ),
-              child: Image.asset('images/flutter.png'),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.grey,
-                  style: BorderStyle.solid,
-                  width: 2.0,
+              Container(
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.grey,
+                    style: BorderStyle.solid,
+                    width: 2.0,
+                  ),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(4),
+                  ),
                 ),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(4),
-                ),
+                child: Image.asset('images/flutter.png'),
               ),
-              child: Image.asset('images/flutter.png'),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.grey,
-                  style: BorderStyle.solid,
-                  width: 2.0,
+              Container(
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.grey,
+                    style: BorderStyle.solid,
+                    width: 2.0,
+                  ),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(4),
+                  ),
                 ),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(4),
-                ),
+                child: Image.asset('images/flutter.png'),
               ),
-              child: Image.asset('images/flutter.png'),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.grey,
-                  style: BorderStyle.solid,
-                  width: 2.0,
+              Container(
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.grey,
+                    style: BorderStyle.solid,
+                    width: 2.0,
+                  ),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(4),
+                  ),
                 ),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(4),
-                ),
+                child: Image.asset('images/flutter.png'),
               ),
-              child: Image.asset('images/flutter.png'),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.grey,
-                  style: BorderStyle.solid,
-                  width: 2.0,
+              Container(
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.grey,
+                    style: BorderStyle.solid,
+                    width: 2.0,
+                  ),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(4),
+                  ),
                 ),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(4),
-                ),
+                child: Image.asset('images/flutter.png'),
               ),
-              child: Image.asset('images/flutter.png'),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.grey,
-                  style: BorderStyle.solid,
-                  width: 2.0,
+              Container(
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.grey,
+                    style: BorderStyle.solid,
+                    width: 2.0,
+                  ),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(4),
+                  ),
                 ),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(4),
-                ),
+                child: Image.asset('images/flutter.png'),
               ),
-              child: Image.asset('images/flutter.png'),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.grey,
-                  style: BorderStyle.solid,
-                  width: 2.0,
+              Container(
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.grey,
+                    style: BorderStyle.solid,
+                    width: 2.0,
+                  ),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(4),
+                  ),
                 ),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(4),
-                ),
+                child: Image.asset('images/flutter.png'),
               ),
-              child: Image.asset('images/flutter.png'),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.grey,
-                  style: BorderStyle.solid,
-                  width: 2.0,
+              Container(
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.grey,
+                    style: BorderStyle.solid,
+                    width: 2.0,
+                  ),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(4),
+                  ),
                 ),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(4),
-                ),
+                child: Image.asset('images/flutter.png'),
               ),
-              child: Image.asset('images/flutter.png'),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.grey,
-                  style: BorderStyle.solid,
-                  width: 2.0,
+              Container(
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.grey,
+                    style: BorderStyle.solid,
+                    width: 2.0,
+                  ),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(4),
+                  ),
                 ),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(4),
-                ),
+                child: Image.asset('images/flutter.png'),
               ),
-              child: Image.asset('images/flutter.png'),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
