@@ -31,110 +31,116 @@ class MyApp extends StatelessWidget {
         body: SafeArea(
           child: Row(
             children: [
-              Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  FlutterLogo(),
-                  Container(
-                    padding: EdgeInsets.all(10.0),
-                    margin: EdgeInsets.all(10.0),
-                    child: Text(
-                      'Hello1',
-                      style: TextStyle(
-                        fontSize: 30,
-                        fontWeight: FontWeight.w300,
-                        fontStyle: FontStyle.italic,
+              Expanded(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    FlutterLogo(),
+                    Container(
+                      padding: EdgeInsets.all(10.0),
+                      margin: EdgeInsets.all(10.0),
+                      child: Text(
+                        'Hello1',
+                        style: TextStyle(
+                          fontSize: 30,
+                          fontWeight: FontWeight.w300,
+                          fontStyle: FontStyle.italic,
+                        ),
                       ),
+                      color: Colors.white,
+                      height: 50.0,
                     ),
-                    color: Colors.white,
-                    height: 50.0,
-                  ),
-                  Container(
-                    padding: EdgeInsets.all(10.0),
-                    margin: EdgeInsets.all(10.0),
-                    child: Text(
-                      'Hello',
-                      style: TextStyle(
-                        fontSize: 30,
-                        fontWeight: FontWeight.w300,
-                        fontStyle: FontStyle.italic,
+                    Container(
+                      padding: EdgeInsets.all(10.0),
+                      margin: EdgeInsets.all(10.0),
+                      child: Text(
+                        'Hello',
+                        style: TextStyle(
+                          fontSize: 30,
+                          fontWeight: FontWeight.w300,
+                          fontStyle: FontStyle.italic,
+                        ),
                       ),
+                      color: Colors.white,
+                      height: 50.0,
                     ),
-                    color: Colors.white,
-                    height: 50.0,
-                  ),
-                ],
+                  ],
+                ),
               ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  FlutterLogo(),
-                  Container(
-                    padding: EdgeInsets.all(10.0),
-                    margin: EdgeInsets.all(10.0),
-                    child: Text(
-                      'Hello1',
-                      style: TextStyle(
-                        fontSize: 30,
-                        fontWeight: FontWeight.w300,
-                        fontStyle: FontStyle.italic,
+              Expanded(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    FlutterLogo(),
+                    Container(
+                      padding: EdgeInsets.all(10.0),
+                      margin: EdgeInsets.all(10.0),
+                      child: Text(
+                        'Hello1',
+                        style: TextStyle(
+                          fontSize: 30,
+                          fontWeight: FontWeight.w300,
+                          fontStyle: FontStyle.italic,
+                        ),
                       ),
+                      color: Colors.white,
+                      height: 50.0,
                     ),
-                    color: Colors.white,
-                    height: 50.0,
-                  ),
-                  Container(
-                    padding: EdgeInsets.all(10.0),
-                    margin: EdgeInsets.all(10.0),
-                    child: Text(
-                      'Hello',
-                      style: TextStyle(
-                        fontSize: 30,
-                        fontWeight: FontWeight.w300,
-                        fontStyle: FontStyle.italic,
+                    Container(
+                      padding: EdgeInsets.all(10.0),
+                      margin: EdgeInsets.all(10.0),
+                      child: Text(
+                        'Hello',
+                        style: TextStyle(
+                          fontSize: 30,
+                          fontWeight: FontWeight.w300,
+                          fontStyle: FontStyle.italic,
+                        ),
                       ),
+                      color: Colors.white,
+                      height: 50.0,
                     ),
-                    color: Colors.white,
-                    height: 50.0,
-                  ),
-                ],
+                  ],
+                ),
               ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  FlutterLogo(),
-                  Container(
-                    padding: EdgeInsets.all(10.0),
-                    margin: EdgeInsets.all(10.0),
-                    child: Text(
-                      'Hello1',
-                      style: TextStyle(
-                        fontSize: 30,
-                        fontWeight: FontWeight.w300,
-                        fontStyle: FontStyle.italic,
+              Expanded(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    FlutterLogo(),
+                    Container(
+                      padding: EdgeInsets.all(10.0),
+                      margin: EdgeInsets.all(10.0),
+                      child: Text(
+                        'Hello1',
+                        style: TextStyle(
+                          fontSize: 30,
+                          fontWeight: FontWeight.w300,
+                          fontStyle: FontStyle.italic,
+                        ),
                       ),
+                      color: Colors.white,
+                      height: 50.0,
                     ),
-                    color: Colors.white,
-                    height: 50.0,
-                  ),
-                  Container(
-                    padding: EdgeInsets.all(10.0),
-                    margin: EdgeInsets.all(10.0),
-                    child: Text(
-                      'Hello',
-                      style: TextStyle(
-                        fontSize: 30,
-                        fontWeight: FontWeight.w300,
-                        fontStyle: FontStyle.italic,
+                    Container(
+                      padding: EdgeInsets.all(10.0),
+                      margin: EdgeInsets.all(10.0),
+                      child: Text(
+                        'Hello',
+                        style: TextStyle(
+                          fontSize: 30,
+                          fontWeight: FontWeight.w300,
+                          fontStyle: FontStyle.italic,
+                        ),
                       ),
+                      color: Colors.white,
+                      height: 50.0,
                     ),
-                    color: Colors.white,
-                    height: 50.0,
-                  ),
-                ],
+                  ],
+                ),
               ),
             ],
           ),
