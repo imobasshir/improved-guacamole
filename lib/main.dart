@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
               Card(
                 child: ListTile(
                   title: Text(
-                    'Bio Data',
+                    'Resume',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontWeight: FontWeight.w900,
@@ -57,6 +57,22 @@ class MyApp extends StatelessWidget {
                 child: ListTile(
                   title: Text(
                     'This is a flutter dart which is used to teach Flutter.',
+                  ),
+                ),
+              ),
+              Card(
+                child: ListTile(
+                  title: Text(
+                    'Skills: ',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  subtitle: Text(
+                    'Flutter Widgets, Material Widgets',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                    ),
                   ),
                 ),
               ),
