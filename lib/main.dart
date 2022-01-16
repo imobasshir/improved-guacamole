@@ -12,95 +12,29 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: SafeArea(
-          child: ListView(
+          child: Stack(
+            alignment: AlignmentDirectional.bottomCenter,
             children: [
               Container(
                 decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(5.0),
                   border: Border.all(
                     color: Colors.grey,
+                    width: 3.0,
                     style: BorderStyle.solid,
-                    width: 4.0,
                   ),
-                  borderRadius: BorderRadius.circular(5),
                 ),
                 child: Image.asset('images/flutter.png'),
               ),
               Container(
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: Colors.grey,
-                    style: BorderStyle.solid,
-                    width: 4.0,
+                child: Text(
+                  'Flutter',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                    fontStyle: FontStyle.italic,
+                    fontSize: 32,
                   ),
-                  borderRadius: BorderRadius.circular(5),
                 ),
-                child: Image.asset('images/flutter.png'),
-              ),
-              Container(
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: Colors.grey,
-                    style: BorderStyle.solid,
-                    width: 4.0,
-                  ),
-                  borderRadius: BorderRadius.circular(5),
-                ),
-                child: Image.asset('images/flutter.png'),
-              ),
-              Container(
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: Colors.grey,
-                    style: BorderStyle.solid,
-                    width: 4.0,
-                  ),
-                  borderRadius: BorderRadius.circular(5),
-                ),
-                child: Image.asset('images/flutter.png'),
-              ),
-              Container(
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: Colors.grey,
-                    style: BorderStyle.solid,
-                    width: 4.0,
-                  ),
-                  borderRadius: BorderRadius.circular(5),
-                ),
-                child: Image.asset('images/flutter.png'),
-              ),
-              Container(
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: Colors.grey,
-                    style: BorderStyle.solid,
-                    width: 4.0,
-                  ),
-                  borderRadius: BorderRadius.circular(5),
-                ),
-                child: Image.asset('images/flutter.png'),
-              ),
-              Container(
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: Colors.grey,
-                    style: BorderStyle.solid,
-                    width: 4.0,
-                  ),
-                  borderRadius: BorderRadius.circular(5),
-                ),
-                child: Image.asset('images/flutter.png'),
-              ),
-              Container(
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: Colors.grey,
-                    style: BorderStyle.solid,
-                    width: 4.0,
-                  ),
-                  borderRadius: BorderRadius.circular(5),
-                ),
-                child: Image.asset('images/flutter.png'),
               ),
             ],
           ),
