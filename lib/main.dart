@@ -49,7 +49,6 @@ class MyApp extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Divider(),
                   ],
                 ),
               ),
