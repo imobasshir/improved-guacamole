@@ -12,27 +12,51 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: SafeArea(
-          child: Stack(
-            alignment: AlignmentDirectional.bottomCenter,
+          child: ListView(
             children: [
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5.0),
-                  border: Border.all(
-                    color: Colors.grey,
-                    width: 3.0,
-                    style: BorderStyle.solid,
+              Card(
+                child: ListTile(
+                  title: Text(
+                    'Bio Data',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontWeight: FontWeight.w900,
+                    ),
                   ),
                 ),
-                child: Image.asset('images/flutter.png'),
               ),
-              Container(
-                child: Text(
-                  'Flutter',
-                  style: TextStyle(
-                    fontWeight: FontWeight.w400,
-                    fontStyle: FontStyle.italic,
-                    fontSize: 32,
+              Card(
+                child: Column(
+                  children: [
+                    CircleAvatar(
+                      backgroundImage: AssetImage('images/flutter.png'),
+                    ),
+                    Divider(),
+                    ListTile(
+                      title: Text(
+                        'Flutter',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontStyle: FontStyle.italic,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                      subtitle: Text(
+                        'Dart',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ),
+                    Divider(),
+                  ],
+                ),
+              ),
+              Card(
+                child: ListTile(
+                  title: Text(
+                    'This is a flutter dart which is used to teach Flutter.',
                   ),
                 ),
               ),
