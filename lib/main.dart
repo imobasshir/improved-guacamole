@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: SafeArea(
-          child: Column(
+          child: ListView(
             children: [
               Image.asset('images/learn_hero.png'),
               Row(
@@ -22,12 +22,12 @@ class MyApp extends StatelessWidget {
                       children: [
                         Row(
                           children: const [
-                            Text('Learning Hero'),
+                            Text('Learning Flutter'),
                           ],
                         ),
                         Row(
                           children: const [
-                            Text('Learning hero by Flutter'),
+                            Text('Learning Flutter by learning hero'),
                           ],
                         ),
                       ],
@@ -37,6 +37,48 @@ class MyApp extends StatelessWidget {
                     Icons.star_rate,
                   ),
                   const Text('5'),
+                ],
+              ),
+              Row(
+                children: [
+                  Column(
+                    children: const [
+                      Icon(
+                        Icons.phone,
+                      ),
+                      Text('Phone'),
+                    ],
+                  ),
+                  Column(
+                    children: const [
+                      Icon(
+                        Icons.directions,
+                      ),
+                      Text('Route'),
+                    ],
+                  ),
+                  Column(
+                    children: const [
+                      Icon(
+                        Icons.share,
+                      ),
+                      Text('Share'),
+                    ],
+                  ),
+                ],
+              ),
+              Row(
+                children: const [
+                  Expanded(
+                    child: Text(
+                      'Lake Oeschinen lies at the foot of the Blüemlisalp in the Bernese '
+                      'Alps. Situated 1,578 meters above sea level, it is one of the '
+                      'larger Alpine Lakes. A gondola ride from Kandersteg, followed by a '
+                      'half-hour walk through pastures and pine forest, leads you to the '
+                      'lake, which warms to 20 degrees Celsius in the summer. Activities '
+                      'enjoyed here include rowing, and riding the summer toboggan run.',
+                    ),
+                  ),
                 ],
               ),
             ],
