@@ -12,68 +12,32 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: SafeArea(
-          child: ListView(
+          child: Column(
             children: [
-              const Card(
-                child: ListTile(
-                  title: Text(
-                    'Resume',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontWeight: FontWeight.w900,
-                    ),
-                  ),
-                ),
-              ),
-              Card(
-                child: Column(
-                  children: const [
-                    CircleAvatar(
-                      backgroundImage: AssetImage('images/flutter.png'),
-                    ),
-                    Divider(),
-                    ListTile(
-                      title: Text(
-                        'Flutter',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontStyle: FontStyle.italic,
-                          fontWeight: FontWeight.w700,
+              Image.asset('images/learn_hero.png'),
+              Row(
+                children: [
+                  Expanded(
+                    child: Column(
+                      children: [
+                        Row(
+                          children: const [
+                            Text('Learning Hero'),
+                          ],
                         ),
-                      ),
-                      subtitle: Text(
-                        'Dart',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontWeight: FontWeight.w500,
+                        Row(
+                          children: const [
+                            Text('Learning hero by Flutter'),
+                          ],
                         ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              const Card(
-                child: ListTile(
-                  title: Text(
-                    'This is a flutter dart which is used to teach Flutter.',
-                  ),
-                ),
-              ),
-              const Card(
-                child: ListTile(
-                  title: Text(
-                    'Skills: ',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w600,
+                      ],
                     ),
                   ),
-                  subtitle: Text(
-                    'Flutter Widgets, Material Widgets',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w500,
-                    ),
+                  const Icon(
+                    Icons.star_rate,
                   ),
-                ),
+                  const Text('5'),
+                ],
               ),
             ],
           ),
