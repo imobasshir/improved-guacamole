@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
         body: SafeArea(
           child: ListView(
             children: [
-              Card(
+              const Card(
                 child: ListTile(
                   title: Text(
                     'Resume',
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
               ),
               Card(
                 child: Column(
-                  children: [
+                  children: const [
                     CircleAvatar(
                       backgroundImage: AssetImage('images/flutter.png'),
                     ),
@@ -52,14 +52,14 @@ class MyApp extends StatelessWidget {
                   ],
                 ),
               ),
-              Card(
+              const Card(
                 child: ListTile(
                   title: Text(
                     'This is a flutter dart which is used to teach Flutter.',
                   ),
                 ),
               ),
-              Card(
+              const Card(
                 child: ListTile(
                   title: Text(
                     'Skills: ',
