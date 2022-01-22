@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test_application_1/utils/routes.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
+
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  final _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
@@ -10,6 +17,7 @@ class LoginPage extends StatelessWidget {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Form(
+            key: _formKey,
             child: Column(
               children: [
                 Image.asset('images/learn_hero.png'),
@@ -33,10 +41,16 @@ class LoginPage extends StatelessWidget {
                   ),
                   child: TextFormField(
                     decoration: const InputDecoration(
-                      label: Text('Name'),
+                      label: Text('Name: '),
                       border: OutlineInputBorder(),
                       hintText: 'Enter Name',
                     ),
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'Please enter name';
+                      }
+                      return null;
+                    },
                   ),
                 ),
                 const SizedBox(
@@ -50,11 +64,20 @@ class LoginPage extends StatelessWidget {
                   child: TextFormField(
                     decoration: const InputDecoration(
                       border: OutlineInputBorder(),
-                      label: Text('Password'),
+                      label: Text('Password: '),
                       hintText: 'Enter Password',
                     ),
                     obscureText: true,
                     obscuringCharacter: '*',
+                    keyboardType: TextInputType.name,
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'Please enter password';
+                      } else if (value.length < 6) {
+                        return 'Password shoud be greater than 6 digits';
+                      }
+                      return null;
+                    },
                   ),
                 ),
                 const SizedBox(
@@ -72,6 +95,12 @@ class LoginPage extends StatelessWidget {
                       hintText: '1234567890',
                       border: OutlineInputBorder(),
                     ),
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'Please enter mobile no';
+                      }
+                      return null;
+                    },
                     maxLength: 10,
                     keyboardType: TextInputType.phone,
                   ),
@@ -86,11 +115,17 @@ class LoginPage extends StatelessWidget {
                   ),
                   child: TextFormField(
                     decoration: const InputDecoration(
-                      label: Text('Email'),
-                      hintText: 'abcdefghij',
+                      label: Text('Email: '),
+                      hintText: 'mail-id',
                       suffix: Text('@gmail.com'),
                       border: OutlineInputBorder(),
                     ),
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'Please enter email id';
+                      }
+                      return null;
+                    },
                     keyboardType: TextInputType.emailAddress,
                   ),
                 ),
@@ -99,7 +134,9 @@ class LoginPage extends StatelessWidget {
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, MyRoutes.home);
+                    if (_formKey.currentState!.validate()) {
+                      Navigator.pushNamed(context, MyRoutes.home);
+                    }
                   },
                   child: const Text(
                     'Login',
