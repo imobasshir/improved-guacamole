@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_test_application_1/pages/login_page.dart';
+import 'package:flutter_test_application_1/pages/next_page.dart';
+import 'package:flutter_test_application_1/utils/routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,88 +13,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        body: SafeArea(
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                Image.asset('images/learn_hero.png'),
-                const SizedBox(
-                  height: 20.0,
-                ),
-                const Text(
-                  'TextField Intro',
-                  style: TextStyle(
-                    color: Colors.lightBlue,
-                    fontSize: 22,
-                  ),
-                ),
-                const SizedBox(
-                  height: 20.0,
-                ),
-                const Padding(
-                  padding: EdgeInsets.all(16.0),
-                  child: TextField(
-                    decoration: InputDecoration(
-                      label: Text('Name'),
-                      border: OutlineInputBorder(),
-                      hintText: 'Enter Name',
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  height: 20.0,
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: TextField(
-                    decoration: InputDecoration(
-                      border: UnderlineInputBorder(
-                        borderRadius: BorderRadius.circular(3.0),
-                      ),
-                      label: const Text('Password'),
-                      hintText: 'Enter Password',
-                    ),
-                    obscureText: true,
-                    obscuringCharacter: '*',
-                  ),
-                ),
-                const SizedBox(
-                  height: 20.0,
-                ),
-                const Padding(
-                  padding: EdgeInsets.all(16.0),
-                  child: TextField(
-                    decoration: InputDecoration(
-                      label: Text('Mobile No: '),
-                      prefixText: '+91',
-                      hintText: '1234567890',
-                      border: OutlineInputBorder(),
-                    ),
-                    maxLength: 10,
-                    keyboardType: TextInputType.phone,
-                  ),
-                ),
-                const SizedBox(
-                  height: 20.0,
-                ),
-                const Padding(
-                  padding: EdgeInsets.all(16.0),
-                  child: TextField(
-                    decoration: InputDecoration(
-                      label: Text('Email'),
-                      hintText: 'abcdefghij',
-                      suffix: Text('@gmail.com'),
-                      border: OutlineInputBorder(),
-                    ),
-                    keyboardType: TextInputType.emailAddress,
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ),
-      ),
+      routes: {
+        "/": (context) => const LoginPage(),
+        MyRoutes.home: (context) => const HomePage(),
+        MyRoutes.loginRoute: (context) => const LoginPage()
+      },
     );
   }
 }
