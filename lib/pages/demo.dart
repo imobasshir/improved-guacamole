@@ -30,12 +30,12 @@ class _DemoState extends State<Demo> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(myText),
-            ElevatedButton(
-              onPressed: _clickMe,
-              child: const Text('Click Me'),
-            ),
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _clickMe,
+        child: const Icon(Icons.change_circle),
       ),
     );
   }
