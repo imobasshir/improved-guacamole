@@ -16,7 +16,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Registration'),
+        title: const Text('Login'),
       ),
       body: SafeArea(
         child: Form(
@@ -26,7 +26,7 @@ class _LoginPageState extends State<LoginPage> {
               const Padding(
                 padding: EdgeInsets.all(22.0),
                 child: Text(
-                  'Registration',
+                  'Login',
                   style: TextStyle(
                     fontSize: 22,
                   ),

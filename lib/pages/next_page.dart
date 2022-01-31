@@ -16,10 +16,12 @@ class HomePage extends StatelessWidget {
           actions: [
             IconButton(
               icon: const Icon(Icons.search_outlined),
+              tooltip: 'Search',
               onPressed: () {},
             ),
             IconButton(
               icon: const Icon(Icons.more_vert_outlined),
+              tooltip: 'More',
               onPressed: () {},
             ),
           ],
