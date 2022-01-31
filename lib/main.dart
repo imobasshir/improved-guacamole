@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_test_application_1/pages/chats.dart';
 import 'package:flutter_test_application_1/pages/login_page.dart';
 import 'package:flutter_test_application_1/pages/next_page.dart';
 import 'package:flutter_test_application_1/utils/routes.dart';
@@ -25,7 +26,8 @@ class MyApp extends StatelessWidget {
       routes: {
         "/": (context) => const LoginPage(),
         MyRoutes.home: (context) => const HomePage(),
-        MyRoutes.loginRoute: (context) => const LoginPage()
+        MyRoutes.loginRoute: (context) => const LoginPage(),
+        MyRoutes.chat: (context) => const ChatsView(),
       },
     );
   }
