@@ -1,0 +1,25 @@
+FLUTTER NOTES
+
+31-01-2022
+20:41
+-> Set State
+it is important funtionality in fluttter which is used to change the state from 
+current state to new state on callback of some thing like button pressed it is done
+only in presence of stateful widget
+
+30-01-2022
+00:50
+-> To print the data on screen of a static app
+for this we have to make a list or a map 
+in case we use list and then we first create constuructor of item we want to create 
+then call them in list i.e., constructor and assigin the value to them 
+and then map it to which ever widget we want to map with the help of
+list_variable_name.map().toList() funtion and then 
+return the things in form of appropriate widget where we want to show on screen.
+
+01:24
+-> String Interpolation
+'\$$'
+
+ALternative to to string
+'${text to be printed}'
