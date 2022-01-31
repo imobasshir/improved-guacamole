@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test_application_1/pages/chats.dart';
 import 'package:flutter_test_application_1/pages/demo.dart';
+import 'package:flutter_test_application_1/pages/form.dart';
 import 'package:flutter_test_application_1/pages/login_page.dart';
 import 'package:flutter_test_application_1/pages/next_page.dart';
 import 'package:flutter_test_application_1/utils/routes.dart';
@@ -25,10 +26,11 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark,
       ),
       routes: {
-        "/": (context) => const Demo(),
+        "/": (context) => const FormView(),
         MyRoutes.home: (context) => const HomePage(),
         MyRoutes.loginRoute: (context) => const LoginPage(),
         MyRoutes.demo: (context) => const Demo(),
+        "/form": (context) => const FormView(),
       },
     );
   }
