@@ -35,6 +35,9 @@ class FormView extends StatelessWidget {
                             style: TextStyle(color: Colors.indigo),
                           ),
                           hintText: 'Enter Mail Id',
+                          hintStyle: TextStyle(
+                            color: Colors.indigo,
+                          ),
                         ),
                         keyboardType: TextInputType.emailAddress,
                       ),
@@ -49,11 +52,23 @@ class FormView extends StatelessWidget {
                             style: TextStyle(color: Colors.indigo),
                           ),
                           hintText: 'Enter Password',
+                          hintStyle: TextStyle(
+                            color: Colors.indigo,
+                          ),
                         ),
                         obscureText: true,
                         obscuringCharacter: '*',
                       ),
                     ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 22.0),
+                      child: MaterialButton(
+                        onPressed: () {},
+                        child: const Text("Login"),
+                        color: Colors.indigo,
+                        textColor: Colors.white,
+                      ),
+                    )
                   ],
                 ),
               ),
