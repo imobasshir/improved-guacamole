@@ -9,6 +9,7 @@ class MyCalculator extends StatefulWidget {
 }
 
 class _MyCalculatorState extends State<MyCalculator> {
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,24 +17,44 @@ class _MyCalculatorState extends State<MyCalculator> {
         title: const Text(
           'Calculator',
           style: TextStyle(
-            color: Colors.indigo,
+            color: Colors.blue,
           ),
         ),
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.black87,
         elevation: 0.0,
       ),
       body: Container(
-        color: Colors.white,
+        color: Colors.black87,
         padding: const EdgeInsets.only(bottom: 62.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
+            Container(
+              padding: const EdgeInsets.only(right: 56.0),
+              child: const Text(
+                '987x1',
+                textScaleFactor: 2.0,
+                style: TextStyle(color: Colors.grey),
+              ),
+              alignment: const Alignment(1.0, 1.0),
+            ),
+            Container(
+              padding: const EdgeInsets.only(right: 56.0),
+              child: const Text(
+                '987',
+                textScaleFactor: 3.0,
+                style: TextStyle(color: Colors.white),
+              ),
+              alignment: const Alignment(1.0, 1.0),
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: const [
                 Padding(
                   padding: EdgeInsets.all(8.0),
-                  child: CalulatorButton(text: 'AC'),
+                  child: CalulatorButton(
+                    text: 'AC',
+                  ),
                 ),
                 Padding(
                   padding: EdgeInsets.all(8.0),
