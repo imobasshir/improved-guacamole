@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'button.dart';
 
 class MyCalculator extends StatefulWidget {
   const MyCalculator({Key? key}) : super(key: key);
@@ -27,152 +28,108 @@ class _MyCalculatorState extends State<MyCalculator> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
-                  SizedBox(
-                    width: 260,
-                    child: TextField(
-                      keyboardType: TextInputType.number,
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
+              children: const [
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: FloatingActionButton(
-                    onPressed: () {},
-                    child: const Text('7'),
-                  ),
+                  padding: EdgeInsets.all(8.0),
+                  child: CalulatorButton(text: 'AC'),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: FloatingActionButton(
-                    onPressed: () {},
-                    child: const Text('8'),
-                  ),
+                  padding: EdgeInsets.all(8.0),
+                  child: CalulatorButton(text: 'C'),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: FloatingActionButton(
-                    onPressed: () {},
-                    child: const Text('9'),
-                  ),
+                  padding: EdgeInsets.all(8.0),
+                  child: CalulatorButton(text: '%'),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: FloatingActionButton(
-                    onPressed: () {},
-                    child: const Text('/'),
-                  ),
+                  padding: EdgeInsets.all(8.0),
+                  child: CalulatorButton(text: '/'),
                 ),
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
+              children: const [
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: FloatingActionButton(
-                    onPressed: () {},
-                    child: const Text('4'),
-                  ),
+                  padding: EdgeInsets.all(8.0),
+                  child: CalulatorButton(text: '7'),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: FloatingActionButton(
-                    onPressed: () {},
-                    child: const Text('5'),
-                  ),
+                  padding: EdgeInsets.all(8.0),
+                  child: CalulatorButton(text: '8'),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: FloatingActionButton(
-                    onPressed: () {},
-                    child: const Text('6'),
-                  ),
+                  padding: EdgeInsets.all(8.0),
+                  child: CalulatorButton(text: '9'),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: FloatingActionButton(
-                    onPressed: () {},
-                    child: const Text('x'),
-                  ),
+                  padding: EdgeInsets.all(8.0),
+                  child: CalulatorButton(text: 'x'),
                 ),
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
+              children: const [
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: FloatingActionButton(
-                    onPressed: () {},
-                    child: const Text('1'),
-                  ),
+                  padding: EdgeInsets.all(8.0),
+                  child: CalulatorButton(text: '4'),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: FloatingActionButton(
-                    onPressed: () {},
-                    child: const Text('2'),
-                  ),
+                  padding: EdgeInsets.all(8.0),
+                  child: CalulatorButton(text: '5'),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: FloatingActionButton(
-                    onPressed: () {},
-                    child: const Text('3'),
-                  ),
+                  padding: EdgeInsets.all(8.0),
+                  child: CalulatorButton(text: '6'),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: FloatingActionButton(
-                    onPressed: () {},
-                    child: const Text('-'),
-                  ),
+                  padding: EdgeInsets.all(8.0),
+                  child: CalulatorButton(text: '-'),
                 ),
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
+              children: const [
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: FloatingActionButton(
-                    onPressed: () {},
-                    child: const Text('0'),
-                  ),
+                  padding: EdgeInsets.all(8.0),
+                  child: CalulatorButton(text: '1'),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: FloatingActionButton(
-                    onPressed: () {},
-                    child: const Text('.'),
-                  ),
+                  padding: EdgeInsets.all(8.0),
+                  child: CalulatorButton(text: '2'),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: FloatingActionButton(
-                    onPressed: () {},
-                    child: const Text('='),
-                  ),
+                  padding: EdgeInsets.all(8.0),
+                  child: CalulatorButton(text: '3'),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: FloatingActionButton(
-                    onPressed: () {},
-                    child: const Text('+'),
-                  ),
+                  padding: EdgeInsets.all(8.0),
+                  child: CalulatorButton(text: '+'),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const [
+                Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: CalulatorButton(text: '0'),
+                ),
+                Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: CalulatorButton(text: '00'),
+                ),
+                Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: CalulatorButton(text: '.'),
+                ),
+                Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: CalulatorButton(text: '='),
                 ),
               ],
             ),
