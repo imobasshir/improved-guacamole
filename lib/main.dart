@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_test_application_1/calc/calculator.dart';
 import 'package:flutter_test_application_1/pages/chats.dart';
 import 'package:flutter_test_application_1/pages/demo.dart';
 import 'package:flutter_test_application_1/pages/form.dart';
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark,
       ),
       routes: {
-        "/": (context) => const FormView(),
+        "/": (context) => const MyCalculator(),
         MyRoutes.home: (context) => const HomePage(),
         MyRoutes.loginRoute: (context) => const LoginPage(),
         MyRoutes.demo: (context) => const Demo(),
