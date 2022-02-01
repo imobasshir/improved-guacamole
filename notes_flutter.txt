@@ -1,5 +1,11 @@
 FLUTTER NOTES
 
+01-02-2022
+23:43
+->To call a funtion on click 
+we can use Funtion callback by creating constructor and fuction call is done when it
+is reqired
+
 31-01-2022
 20:41
 -> Set State
