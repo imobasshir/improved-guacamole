@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'button.dart';
+import 'package:math_expressions/math_expressions.dart';
 
 class MyCalculator extends StatefulWidget {
   const MyCalculator({Key? key}) : super(key: key);
@@ -9,7 +10,40 @@ class MyCalculator extends StatefulWidget {
 }
 
 class _MyCalculatorState extends State<MyCalculator> {
-  
+  String _history = '';
+  String _expression = '';
+
+  void numOnClick(String text) {
+    setState(() {
+      _expression += text;
+    });
+  }
+
+  void allClear(String text) {
+    setState(() {
+      _expression = '';
+      _history = '';
+    });
+  }
+
+  void clear(String text) {
+    setState(() {
+      _expression = '';
+    });
+  }
+
+  void evaluate(String text) {
+    Parser p = Parser();
+    Expression exp = p.parse(_expression);
+    ContextModel cm = ContextModel();
+    double eval = exp.evaluate(EvaluationType.REAL, cm);
+
+    setState(() {
+      _history = _expression;
+      _expression = eval.toString();
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,127 +64,185 @@ class _MyCalculatorState extends State<MyCalculator> {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Container(
-              padding: const EdgeInsets.only(right: 56.0),
-              child: const Text(
-                '987x1',
+              padding: const EdgeInsets.only(right: 56.0, left: 56.0),
+              child: Text(
+                _history,
                 textScaleFactor: 2.0,
-                style: TextStyle(color: Colors.grey),
+                style: const TextStyle(color: Colors.grey),
               ),
               alignment: const Alignment(1.0, 1.0),
             ),
             Container(
-              padding: const EdgeInsets.only(right: 56.0),
-              child: const Text(
-                '987',
+              padding: const EdgeInsets.only(right: 56.0, left: 56.0),
+              child: Text(
+                _expression,
                 textScaleFactor: 3.0,
-                style: TextStyle(color: Colors.white),
+                style: const TextStyle(color: Colors.white),
               ),
               alignment: const Alignment(1.0, 1.0),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
+              children: [
                 Padding(
-                  padding: EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(8.0),
                   child: CalulatorButton(
                     text: 'AC',
+                    callback: allClear,
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: CalulatorButton(text: 'C'),
+                  padding: const EdgeInsets.all(8.0),
+                  child: CalulatorButton(
+                    text: 'C',
+                    callback: clear,
+                  ),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: CalulatorButton(text: '%'),
+                  padding: const EdgeInsets.all(8.0),
+                  child: CalulatorButton(
+                    text: '%',
+                    callback: numOnClick,
+                  ),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: CalulatorButton(text: '/'),
-                ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
-                Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: CalulatorButton(text: '7'),
-                ),
-                Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: CalulatorButton(text: '8'),
-                ),
-                Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: CalulatorButton(text: '9'),
-                ),
-                Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: CalulatorButton(text: 'x'),
+                  padding: const EdgeInsets.all(8.0),
+                  child: CalulatorButton(
+                    text: '/',
+                    callback: numOnClick,
+                  ),
                 ),
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
+              children: [
                 Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: CalulatorButton(text: '4'),
+                  padding: const EdgeInsets.all(8.0),
+                  child: CalulatorButton(
+                    text: '7',
+                    callback: numOnClick,
+                  ),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: CalulatorButton(text: '5'),
+                  padding: const EdgeInsets.all(8.0),
+                  child: CalulatorButton(
+                    text: '8',
+                    callback: numOnClick,
+                  ),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: CalulatorButton(text: '6'),
+                  padding: const EdgeInsets.all(8.0),
+                  child: CalulatorButton(
+                    text: '9',
+                    callback: numOnClick,
+                  ),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: CalulatorButton(text: '-'),
-                ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
-                Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: CalulatorButton(text: '1'),
-                ),
-                Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: CalulatorButton(text: '2'),
-                ),
-                Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: CalulatorButton(text: '3'),
-                ),
-                Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: CalulatorButton(text: '+'),
+                  padding: const EdgeInsets.all(8.0),
+                  child: CalulatorButton(
+                    text: '*',
+                    callback: numOnClick,
+                  ),
                 ),
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
+              children: [
                 Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: CalulatorButton(text: '0'),
+                  padding: const EdgeInsets.all(8.0),
+                  child: CalulatorButton(
+                    text: '4',
+                    callback: numOnClick,
+                  ),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: CalulatorButton(text: '00'),
+                  padding: const EdgeInsets.all(8.0),
+                  child: CalulatorButton(
+                    text: '5',
+                    callback: numOnClick,
+                  ),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: CalulatorButton(text: '.'),
+                  padding: const EdgeInsets.all(8.0),
+                  child: CalulatorButton(
+                    text: '6',
+                    callback: numOnClick,
+                  ),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: CalulatorButton(text: '='),
+                  padding: const EdgeInsets.all(8.0),
+                  child: CalulatorButton(
+                    text: '-',
+                    callback: numOnClick,
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: CalulatorButton(
+                    text: '1',
+                    callback: numOnClick,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: CalulatorButton(
+                    text: '2',
+                    callback: numOnClick,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: CalulatorButton(
+                    text: '3',
+                    callback: numOnClick,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: CalulatorButton(
+                    text: '+',
+                    callback: numOnClick,
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: CalulatorButton(
+                    text: '0',
+                    callback: numOnClick,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: CalulatorButton(
+                    text: '00',
+                    callback: numOnClick,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: CalulatorButton(
+                    text: '.',
+                    callback: numOnClick,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: CalulatorButton(
+                    text: '=',
+                    callback: evaluate,
+                  ),
                 ),
               ],
             ),
