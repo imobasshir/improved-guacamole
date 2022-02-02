@@ -33,7 +33,7 @@ class _JsonLoadState extends State<JsonLoad> {
                       Text("Height: " + mydata[index]['height']),
                       Text("Weight: " + mydata[index]['weight']),
                       Text("Gender: " + mydata[index]['gender']),
-                      Text("Hair Color: " + mydata[index]['hair_color']),
+                      Text("Hair Color: " + mydata[index]['haircolor']),
                     ],
                   ),
                 );
