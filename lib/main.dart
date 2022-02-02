@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_test_application_1/json_load.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -19,14 +20,9 @@ class MyApp extends StatelessWidget {
       darkTheme: ThemeData(
         brightness: Brightness.dark,
       ),
-      // routes: {
-      //   "/": (context) => const MyCalculator(),
-      //   MyRoutes.home: (context) => const HomePage(),
-      //   MyRoutes.loginRoute: (context) => const LoginPage(),
-      //   MyRoutes.demo: (context) => const Demo(),
-      //   "/form": (context) => const FormView(),
-      //   MyRoutes.calc: (context) => const MyCalculator(),
-      // },
+      routes: {
+        "/": (context) => const JsonLoad(),
+      },
     );
   }
 }

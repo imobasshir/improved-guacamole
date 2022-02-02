@@ -1,5 +1,12 @@
 FLUTTER NOTES
 
+02-02-2021
+19:58
+To load json file we use Future builder which takes Default Asset Bundle as future
+and builder where builder takes context and snapshot and inside it we decode json
+using JSON.decode(snapshot.data.toString) 
+and then we pass the data to list view
+
 01-02-2022
 23:43
 ->To call a funtion on click 

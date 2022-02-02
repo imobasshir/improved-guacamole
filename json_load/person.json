@@ -1,0 +1,34 @@
+[
+    {
+        "name": "Mobasshir Imam",
+        "age": "20",
+        "height": "172",
+        "weight": "56",
+        "gender": "male",
+        "hair_color": "black"
+    },
+    {
+        "name": "Fazal Imam",
+        "age": "50",
+        "height": "168",
+        "weight": "76",
+        "gender": "male",
+        "hair_color": "black"
+    },
+    {
+        "name": "Sadique Imam",
+        "age": "45",
+        "height": "174",
+        "weight": "70",
+        "gender": "male",
+        "hair_color": "black"
+    },
+    {
+        "name": "Mohammed Imam",
+        "age": "80",
+        "height": "162",
+        "weight": "50",
+        "gender": "male",
+        "hair_color": "grey"
+    }
+]
