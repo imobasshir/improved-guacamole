@@ -4,4 +4,5 @@ class MyRoutes {
   static String chat = "/chat";
   static String demo = "/demo";
   static String form = "/form";
+  static String calc = "/calc";
 }

@@ -32,6 +32,7 @@ class MyApp extends StatelessWidget {
         MyRoutes.loginRoute: (context) => const LoginPage(),
         MyRoutes.demo: (context) => const Demo(),
         "/form": (context) => const FormView(),
+        MyRoutes.calc: (context) => const MyCalculator(),
       },
     );
   }
