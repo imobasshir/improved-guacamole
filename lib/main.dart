@@ -3,6 +3,7 @@ import 'package:flutter_test_application_1/calc/calculator.dart';
 import 'package:flutter_test_application_1/pages/chats.dart';
 import 'package:flutter_test_application_1/pages/demo.dart';
 import 'package:flutter_test_application_1/pages/form.dart';
+import 'package:flutter_test_application_1/pages/json.dart';
 import 'package:flutter_test_application_1/pages/login_page.dart';
 import 'package:flutter_test_application_1/pages/next_page.dart';
 import 'package:flutter_test_application_1/utils/routes.dart';
@@ -27,12 +28,13 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark,
       ),
       routes: {
-        "/": (context) => const MyCalculator(),
+        "/": (context) => const LoadJson(),
         MyRoutes.home: (context) => const HomePage(),
         MyRoutes.loginRoute: (context) => const LoginPage(),
         MyRoutes.demo: (context) => const Demo(),
         "/form": (context) => const FormView(),
         MyRoutes.calc: (context) => const MyCalculator(),
+        "/json": (context) => const LoadJson()
       },
     );
   }
