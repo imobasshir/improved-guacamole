@@ -132,13 +132,17 @@ class Company {
       };
 }
 
-Future<Users> getUsers() async {
+Future<List<Users>> getUsers() async {
   final response = await http.get(
     Uri.parse('https://jsonplaceholder.typicode.com/users'),
   );
 
   if (response.statusCode == 200) {
-    return Users.fromJson(jsonDecode(response.body)[4]);
+    List<dynamic> body = jsonDecode(response.body);
+
+    List<Users> post = body.map((dynamic item) => Users.fromJson(item),).toList();
+    return post;
+    // return Users.fromJson(jsonDecode(response.body)[4]);
   } else {
     throw Exception('Failed to load post');
   }

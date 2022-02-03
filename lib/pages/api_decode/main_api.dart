@@ -9,12 +9,12 @@ class MyApiCall extends StatefulWidget {
 }
 
 class _MyApiCallState extends State<MyApiCall> {
-  late Future<Users> users;
+  // late Future<Users> users;
 
   @override
   void initState() {
     super.initState();
-    users = getUsers();
+    // users = getUsers();
   }
 
   @override
@@ -25,19 +25,21 @@ class _MyApiCallState extends State<MyApiCall> {
         centerTitle: true,
       ),
       body: Center(
-        child: FutureBuilder<Users>(
-            future: users,
+        child: FutureBuilder<List<Users>>(
+            future: getUsers(),
             builder: (context, snapshot) {
               if (snapshot.hasData) {
-                return ListView(
-                  children: [
-                    Card(
+                final List<Users>? posts = snapshot.data;
+                return ListView.builder(
+                  itemCount: posts?.length,
+                  itemBuilder: (context, index) {
+                    return Card(
                       child: ListTile(
-                        title: Text(snapshot.data!.name),
-                        subtitle: Text(snapshot.data!.email),
+                        title: Text(posts![index].name),
+                        subtitle: Text(posts[index].email),
                       ),
-                    ),
-                  ],
+                    );
+                  },
                 );
               } else if (snapshot.hasError) {
                 return Text(snapshot.error.toString());
