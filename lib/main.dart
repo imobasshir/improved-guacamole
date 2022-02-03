@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test_application_1/calc/calculator.dart';
+import 'package:flutter_test_application_1/pages/api_decode/main_api.dart';
 import 'package:flutter_test_application_1/pages/bottom_navabar.dart';
 import 'package:flutter_test_application_1/pages/time_picker.dart';
 import 'package:flutter_test_application_1/pages/chats.dart';
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark,
       ),
       routes: {
-        "/": (context) => const MyBottomNav(),
+        "/": (context) => const MyApiCall(),
         MyRoutes.home: (context) => const HomePage(),
         MyRoutes.loginRoute: (context) => const LoginPage(),
         MyRoutes.demo: (context) => const Demo(),
