@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_test_application_1/pages/time_picker.dart';
 
 class MyBottomNav extends StatefulWidget {
   const MyBottomNav({Key? key}) : super(key: key);
@@ -10,18 +9,34 @@ class MyBottomNav extends StatefulWidget {
 
 class _MyBottomNavState extends State<MyBottomNav> {
   int _currentIndex = 0;
-  static const List<Widget> _widgetOptions = <Widget>[
+  static const List<Widget> _bodyOption = <Widget>[
     Text(
       'Index 0: Favorates',
+      style: TextStyle(
+        color: Colors.blue,
+      ),
+      textScaleFactor: 2.2,
     ),
     Text(
       'Index 1: Music',
+      style: TextStyle(
+        color: Colors.blue,
+      ),
+      textScaleFactor: 2.2,
     ),
     Text(
       'Index 2: Places',
+      style: TextStyle(
+        color: Colors.blue,
+      ),
+      textScaleFactor: 2.2,
     ),
     Text(
       'Index 3: News',
+      style: TextStyle(
+        color: Colors.blue,
+      ),
+      textScaleFactor: 2.2,
     ),
   ];
 
@@ -38,10 +53,12 @@ class _MyBottomNavState extends State<MyBottomNav> {
         title: const Text('Bottom Nav Bar'),
       ),
       body: Center(
-        child: _widgetOptions.elementAt(_currentIndex),
+        child: _bodyOption.elementAt(_currentIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
+        currentIndex: _currentIndex,
+        onTap: _onItemTapped,
         items: const [
           BottomNavigationBarItem(
             label: 'Favorites',
@@ -60,8 +77,6 @@ class _MyBottomNavState extends State<MyBottomNav> {
             icon: Icon(Icons.library_books),
           ),
         ],
-        currentIndex: _currentIndex,
-        onTap: _onItemTapped,
       ),
     );
   }
