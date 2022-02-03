@@ -13,28 +13,28 @@ class _MyBottomNavState extends State<MyBottomNav> {
     Text(
       'Index 0: Favorates',
       style: TextStyle(
-        color: Colors.blue,
+        color: Colors.lightGreen,
       ),
       textScaleFactor: 2.2,
     ),
     Text(
       'Index 1: Music',
       style: TextStyle(
-        color: Colors.blue,
+        color: Colors.lime,
       ),
       textScaleFactor: 2.2,
     ),
     Text(
       'Index 2: Places',
       style: TextStyle(
-        color: Colors.blue,
+        color: Colors.amberAccent,
       ),
       textScaleFactor: 2.2,
     ),
     Text(
       'Index 3: News',
       style: TextStyle(
-        color: Colors.blue,
+        color: Colors.cyanAccent,
       ),
       textScaleFactor: 2.2,
     ),
@@ -50,7 +50,7 @@ class _MyBottomNavState extends State<MyBottomNav> {
         child: _bodyOption[_currentIndex],
       ),
       bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
+        type: BottomNavigationBarType.shifting,
         currentIndex: _currentIndex,
         onTap: (int index) {
           setState(() {
@@ -60,19 +60,35 @@ class _MyBottomNavState extends State<MyBottomNav> {
         items: const [
           BottomNavigationBarItem(
             label: 'Favorites',
-            icon: Icon(Icons.favorite),
+            backgroundColor: Colors.lightGreen,
+            icon: Icon(
+              Icons.favorite,
+              // color: Colors.blue,
+            ),
           ),
           BottomNavigationBarItem(
             label: 'Music',
-            icon: Icon(Icons.music_note),
+            backgroundColor: Colors.lime,
+            icon: Icon(
+              Icons.music_note,
+              // color: Colors.blue,
+            ),
           ),
           BottomNavigationBarItem(
             label: 'Places',
-            icon: Icon(Icons.location_on),
+            backgroundColor: Colors.amberAccent,
+            icon: Icon(
+              Icons.location_on,
+              // color: Colors.blue,
+            ),
           ),
           BottomNavigationBarItem(
             label: 'News',
-            icon: Icon(Icons.library_books),
+            backgroundColor: Colors.cyanAccent,
+            icon: Icon(
+              Icons.library_books,
+              // color: Colors.blue,
+            ),
           ),
         ],
       ),
