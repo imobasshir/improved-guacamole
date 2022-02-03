@@ -40,12 +40,6 @@ class _MyBottomNavState extends State<MyBottomNav> {
     ),
   ];
 
-  void _onItemTapped(int index) {
-    setState(() {
-      _currentIndex = index;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,12 +47,16 @@ class _MyBottomNavState extends State<MyBottomNav> {
         title: const Text('Bottom Nav Bar'),
       ),
       body: Center(
-        child: _bodyOption.elementAt(_currentIndex),
+        child: _bodyOption[_currentIndex],
       ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         currentIndex: _currentIndex,
-        onTap: _onItemTapped,
+        onTap: (int index) {
+          setState(() {
+            _currentIndex = index;
+          });
+        },
         items: const [
           BottomNavigationBarItem(
             label: 'Favorites',

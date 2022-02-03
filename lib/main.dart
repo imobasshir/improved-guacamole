@@ -38,6 +38,7 @@ class MyApp extends StatelessWidget {
         MyRoutes.chat: (context) => const ChatsView(),
         MyRoutes.calc: (context) => const MyCalculator(),
         "/json": (context) => const LoadJson(),
+        "/timePick": (context) => const TimePick(),
       },
     );
   }
