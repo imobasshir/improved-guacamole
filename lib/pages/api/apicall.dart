@@ -59,11 +59,11 @@ class _DataFromApiState extends State<DataFromApi> {
 
 //     final user = userFromJson(jsonString);
 
-List<User> userFromJson(String str) =>
-    List<User>.from(json.decode(str).map((x) => User.fromJson(x)));
+// List<User> userFromJson(String str) =>
+//     List<User>.from(json.decode(str).map((x) => User.fromJson(x)));
 
-String userToJson(List<User> data) =>
-    json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
+// String userToJson(List<User> data) =>
+//     json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
 
 class User {
   User({
@@ -76,15 +76,17 @@ class User {
   String username;
   String email;
 
+
+  // Convering List<dynamic> to List<User>
   factory User.fromJson(Map<String, dynamic> json) => User(
         name: json["name"],
         username: json["username"],
         email: json["email"],
       );
 
-  Map<String, dynamic> toJson() => {
-        "name": name,
-        "username": username,
-        "email": email,
-      };
+  // Map<String, dynamic> toJson() => {
+  //       "name": name,
+  //       "username": username,
+  //       "email": email,
+  //     };
 }
