@@ -13,10 +13,14 @@ class _DataFromApiState extends State<DataFromApi> {
   Future<List<User>> getUserData() async {
     var response =
         await http.get(Uri.https('jsonplaceholder.typicode.com', 'users'));
-    List jsonData = json.decode(response.body);
-    List<User> users = jsonData.map((data) => User.fromJson(data)).toList();
-    // print(users.length);
-    return users;
+    if (response.statusCode == 200) {
+      List jsonData = json.decode(response.body);
+      List<User> users = jsonData.map((data) => User.fromJson(data)).toList();
+      // print(users.length);
+      return users;
+    } else {
+      throw Exception('Failed to load users');
+    }
   }
 
   @override
@@ -30,11 +34,7 @@ class _DataFromApiState extends State<DataFromApi> {
         child: FutureBuilder(
           future: getUserData(),
           builder: (context, AsyncSnapshot snapshot) {
-            if (snapshot.data == null) {
-              return const Center(
-                child: CircularProgressIndicator(),
-              );
-            } else {
+            if (snapshot.hasData) {
               return ListView.builder(
                 itemCount: snapshot.data.length,
                 itemBuilder: (context, index) {
@@ -47,6 +47,31 @@ class _DataFromApiState extends State<DataFromApi> {
                   );
                 },
               );
+              // return const Center(
+              //   child: CircularProgressIndicator(),
+              // );
+            } else if (snapshot.hasError) {
+              return Center(
+                child: Text(
+                  snapshot.error.toString(),
+                ),
+              );
+            } else {
+              return const Center(
+                child: CircularProgressIndicator(),
+              );
+              // return ListView.builder(
+              //   itemCount: snapshot.data.length,
+              //   itemBuilder: (context, index) {
+              //     return Card(
+              //       child: ListTile(
+              //         title: Text(snapshot.data[index].name),
+              //         subtitle: Text(snapshot.data[index].username),
+              //         trailing: Text(snapshot.data[index].email),
+              //       ),
+              //     );
+              //   },
+              // );
             }
           },
         ),
@@ -75,7 +100,6 @@ class User {
   String name;
   String username;
   String email;
-
 
   // Convering List<dynamic> to List<User>
   factory User.fromJson(Map<String, dynamic> json) => User(
