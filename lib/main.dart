@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test_application_1/calc/calculator.dart';
+import 'package:flutter_test_application_1/news/api_news.dart';
 import 'package:flutter_test_application_1/pages/api/apicall.dart';
 import 'package:flutter_test_application_1/pages/api/other_api_call.dart';
 import 'package:flutter_test_application_1/pages/api_decode/main_api.dart';
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark,
       ),
       routes: {
-        "/": (context) => const OtherApi(),
+        "/": (context) => const NewsApiCall(),
         MyRoutes.home: (context) => const HomePage(),
         MyRoutes.loginRoute: (context) => const LoginPage(),
         MyRoutes.demo: (context) => const Demo(),
