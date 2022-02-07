@@ -18,7 +18,7 @@ class _TakeScreenshotState extends State<TakeScreenshot> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: Colors.white,
+      backgroundColor: Colors.white,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -34,19 +34,36 @@ class _TakeScreenshotState extends State<TakeScreenshot> {
                       Image.asset('images/flutter.png'),
                       const Text(
                         'Flutter Logo',
-                        textScaleFactor: 2.0,
+                        textScaleFactor: 1.6,
+                        style: TextStyle(
+                          color: Colors.blue,
+                        ),
                       )
                     ],
                   ),
                 ),
               ),
             ),
-            TextButton(
-              onPressed: _takeScreenshot,
-              child: const Text(
-                'Take Screenshot and Share',
-              ),
-            )
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text(
+                  'Take Screenshot and Share',
+                  textScaleFactor: 1.4,
+                  style: TextStyle(
+                    color: Colors.blue,
+                  ),
+                ),
+                IconButton(
+                  onPressed: _takeScreenshot,
+                  icon: const Icon(
+                    Icons.share,
+                  ),
+                  tooltip: 'Share',
+                  color: Colors.blue,
+                ),
+              ],
+            ),
           ],
         ),
       ),
@@ -59,7 +76,9 @@ class _TakeScreenshotState extends State<TakeScreenshot> {
     final imagePath = await File('${directory.path}/image.png').create();
     await imagePath.writeAsBytes(imageFile!);
 
-    await Share.shareFiles([imagePath.path]);
+    await Share.shareFiles(
+      [imagePath.path],
+      text: 'Image shared Using Flutter App',
+    );
   }
-  
 }
