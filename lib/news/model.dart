@@ -52,19 +52,19 @@ class NewsModel {
         articles: List<Article>.from(json["articles"].map((x) => Article.fromJson(x))),
     );
 
-    // Map<String, dynamic> toJson() => {
-    //     "status": status,
-    //     "totalResults": totalResults,
-    //     "articles": List<dynamic>.from(articles.map((x) => x.toJson())),
-    // };
+    Map<String, dynamic> toJson() => {
+        "status": status,
+        "totalResults": totalResults,
+        "articles": List<dynamic>.from(articles.map((x) => x.toJson())),
+    };
 
-    Map toJson() {
-    final Map data = <dynamic, dynamic>{};
-    data['status'] = status;
-    data['totalResults'] = totalResults;
-    data['articles'] = articles.map((v) => v.toJson()).toList();
-    return data;
-  }
+  //   Map toJson() {
+  //   final Map data = <dynamic, dynamic>{};
+  //   data['status'] = status;
+  //   data['totalResults'] = totalResults;
+  //   data['articles'] = articles.map((v) => v.toJson()).toList();
+  //   return data;
+  // }
 }
 
 class Article {
@@ -96,27 +96,27 @@ class Article {
         publishedAt: DateTime.parse(json["publishedAt"]),
     );
 
-    // Map<String, dynamic> toJson() => {
-    //     "source": source.toJson(),
-    //     "author": author,
-    //     "title": title,
-    //     "description": description,
-    //     "url": url,
-    //     "urlToImage": urlToImage,
-    //     "publishedAt": publishedAt.toIso8601String(),
-    // };
+    Map<String, dynamic> toJson() => {
+        "source": source.toJson(),
+        "author": author,
+        "title": title,
+        "description": description,
+        "url": url,
+        "urlToImage": urlToImage,
+        "publishedAt": publishedAt.toIso8601String(),
+    };
 
-    Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = {};
-    data['source'] = source.toJson();
-    data['author'] = author;
-    data['title'] = title;
-    data['description'] = description;
-    data['url'] = url;
-    data['urlToImage'] = urlToImage;
-    data['publishedAt'] = publishedAt;
-    return data;
-  }
+  //   Map<String, dynamic> toJson() {
+  //   final Map<String, dynamic> data = {};
+  //   data['source'] = source.toJson();
+  //   data['author'] = author;
+  //   data['title'] = title;
+  //   data['description'] = description;
+  //   data['url'] = url;
+  //   data['urlToImage'] = urlToImage;
+  //   data['publishedAt'] = publishedAt;
+  //   return data;
+  // }
 }
 
 class Source {
@@ -130,13 +130,13 @@ class Source {
         name: json["name"],
     );
 
-    // Map<String, dynamic> toJson() => {
-    //     "name": name,
-    // };
+    Map<String, dynamic> toJson() => {
+        "name": name,
+    };
 
-    Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = {};
-    data['name'] = name;
-    return data;
-    }
+    // Map<String, dynamic> toJson() {
+    // final Map<String, dynamic> data = {};
+    // data['name'] = name;
+    // return data;
+    // }
 }
