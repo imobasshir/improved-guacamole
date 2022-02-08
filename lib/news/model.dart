@@ -31,32 +31,35 @@
 //     final newsModel = newsModelFromJson(jsonString);
 import 'dart:convert';
 
+import 'package:flutter/cupertino.dart';
+
 NewsModel newsModelFromJson(String str) => NewsModel.fromJson(json.decode(str));
 
 String newsModelToJson(NewsModel data) => json.encode(data.toJson());
 
 class NewsModel {
-    NewsModel({
-        required this.status,
-        required this.totalResults,
-        required this.articles,
-    });
+  NewsModel({
+    required this.status,
+    required this.totalResults,
+    required this.articles,
+  });
 
-    final String? status;
-    final int? totalResults;
-    final List<Article>? articles;
+  final String? status;
+  final int? totalResults;
+  final List<Article>? articles;
 
-    factory NewsModel.fromJson(Map<String, dynamic> json) => NewsModel(
+  factory NewsModel.fromJson(Map<String, dynamic> json) => NewsModel(
         status: json["status"],
         totalResults: json["totalResults"],
-        articles: List<Article>.from(json["articles"].map((x) => Article.fromJson(x))),
-    );
+        articles: List<Article>.from(
+            json["articles"].map((x) => Article.fromJson(x))),
+      );
 
-    Map<String, dynamic> toJson() => {
+  Map<String, dynamic> toJson() => {
         "status": status,
         "totalResults": totalResults,
         "articles": List<dynamic>.from(articles!.map((x) => x.toJson())),
-    };
+      };
 
   //   Map toJson() {
   //   final Map data = <dynamic, dynamic>{};
@@ -68,25 +71,25 @@ class NewsModel {
 }
 
 class Article {
-    Article({
-        required this.source,
-        required this.author,
-        required this.title,
-        required this.description,
-        required this.url,
-        required this.urlToImage,
-        required this.publishedAt,
-    });
+  Article({
+    required this.source,
+    required this.author,
+    required this.title,
+    required this.description,
+    required this.url,
+    required this.urlToImage,
+    required this.publishedAt,
+  });
 
-    final Source? source;
-    final dynamic author;
-    final String? title;
-    final String? description;
-    final String? url;
-    final String? urlToImage;
-    final DateTime? publishedAt;
+  final Source? source;
+  final dynamic author;
+  final String? title;
+  final String? description;
+  final String? url;
+  final String? urlToImage;
+  final DateTime? publishedAt;
 
-    factory Article.fromJson(Map<String, dynamic> json) => Article(
+  factory Article.fromJson(Map<String, dynamic> json) => Article(
         source: Source.fromJson(json["source"]),
         author: json["author"],
         title: json["title"],
@@ -94,9 +97,9 @@ class Article {
         url: json["url"],
         urlToImage: json["urlToImage"],
         publishedAt: DateTime.parse(json["publishedAt"]),
-    );
+      );
 
-    Map<String, dynamic> toJson() => {
+  Map<String, dynamic> toJson() => {
         "source": source?.toJson(),
         "author": author,
         "title": title,
@@ -104,7 +107,7 @@ class Article {
         "url": url,
         "urlToImage": urlToImage,
         "publishedAt": publishedAt?.toIso8601String(),
-    };
+      };
 
   //   Map<String, dynamic> toJson() {
   //   final Map<String, dynamic> data = {};
@@ -120,23 +123,23 @@ class Article {
 }
 
 class Source {
-    Source({
-        required this.name,
-    });
+  Source({
+    required this.name,
+  });
 
-    final String? name;
+  final String? name;
 
-    factory Source.fromJson(Map<String, dynamic> json) => Source(
+  factory Source.fromJson(Map<String, dynamic> json) => Source(
         name: json["name"],
-    );
+      );
 
-    Map<String, dynamic> toJson() => {
+  Map<String, dynamic> toJson() => {
         "name": name,
-    };
+      };
 
-    // Map<String, dynamic> toJson() {
-    // final Map<String, dynamic> data = {};
-    // data['name'] = name;
-    // return data;
-    // }
+  // Map<String, dynamic> toJson() {
+  // final Map<String, dynamic> data = {};
+  // data['name'] = name;
+  // return data;
+  // }
 }

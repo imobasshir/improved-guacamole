@@ -42,9 +42,10 @@ class _NewsApiCallState extends State<NewsApiCall> {
         future: fetchNewsList(),
         builder: (context, AsyncSnapshot snapshot) {
           if (snapshot.hasData) {
-            final data = snapshot.data.articles;
+            final _data = snapshot.data.articles;
             return ListView.builder(
-              itemCount: data.length,
+              itemCount: _data.length,
+              // itemCount: 20,
               itemBuilder: (context, index) {
                 return Column(
                   children: [
@@ -52,15 +53,16 @@ class _NewsApiCallState extends State<NewsApiCall> {
                       padding: const EdgeInsets.all(8.0),
                       child: Card(
                         child: ListTile(
-                          title: Image.network(data[index].urlToImage),
+                          title: Image.network(_data[index].urlToImage),
+                          // leading: Image.network(_data[index].urlToImage),
                           subtitle: Text(
-                            data[index].title,
+                            _data[index].title,
                             style: const TextStyle(
                               color: Colors.black,
                             ),
                           ),
                           onTap: () {
-                            launch(data[index].url);
+                            launch(_data[index].url);
                           },
                         ),
                       ),
