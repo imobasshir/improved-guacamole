@@ -53,7 +53,15 @@ class _NewsApiCallState extends State<NewsApiCall> {
                       padding: const EdgeInsets.all(8.0),
                       child: Card(
                         child: ListTile(
-                          title: Image.network(_data[index].urlToImage),
+                          title: Image.network(
+                            _data[index].urlToImage.toString(),
+                            errorBuilder: (context, error, stackTrace) {
+                              return const Text(
+                                'Sorry No Image found',
+                                textScaleFactor: 1.4,
+                              );
+                            },
+                          ),
                           // leading: Image.network(_data[index].urlToImage),
                           subtitle: Text(
                             _data[index].title,
