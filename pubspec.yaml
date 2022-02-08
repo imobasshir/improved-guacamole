@@ -1,7 +1,7 @@
 name: flutter_test_application_1
 description: A new Flutter project.
 
-publish_to: "none" 
+publish_to: "none"
 
 version: 1.0.0+1
 
@@ -20,13 +20,13 @@ dependencies:
   share_plus: ^3.0.4
   path_provider: ^2.0.8
   flip_card: ^0.6.0
+  webview_flutter: ^3.0.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
   flutter_lints: ^1.0.0
-
 
 flutter:
   uses-material-design: true
