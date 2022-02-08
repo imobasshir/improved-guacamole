@@ -5,6 +5,7 @@ import 'package:flutter_test_application_1/pages/api/apicall.dart';
 import 'package:flutter_test_application_1/pages/api/other_api_call.dart';
 import 'package:flutter_test_application_1/pages/api_decode/main_api.dart';
 import 'package:flutter_test_application_1/pages/bottom_navabar.dart';
+import 'package:flutter_test_application_1/pages/flashcars/main.dart';
 import 'package:flutter_test_application_1/pages/read.dart';
 import 'package:flutter_test_application_1/pages/screenshot_share/main.dart';
 import 'package:flutter_test_application_1/pages/time_picker.dart';
@@ -37,7 +38,7 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark,
       ),
       routes: {
-        "/": (context) => const EasyRead(),
+        "/": (context) => const FlashCards(),
         MyRoutes.home: (context) => const HomePage(),
         MyRoutes.loginRoute: (context) => const LoginPage(),
         MyRoutes.demo: (context) => const Demo(),

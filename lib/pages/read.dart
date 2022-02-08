@@ -12,28 +12,30 @@ class _EasyReadState extends State<EasyRead> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Expanded(
-            child: TextField(
-              textInputAction: TextInputAction.done,
-              style: TextStyle(
-                fontSize: _fontSize,
+      body: SafeArea(
+        child: Column(
+          children: [
+            Expanded(
+              child: TextField(
+                textInputAction: TextInputAction.done,
+                style: TextStyle(
+                  fontSize: _fontSize,
+                ),
+                maxLines: null,
               ),
-              maxLines: null,
             ),
-          ),
-          Slider(
-            value: _fontSize,
-            onChanged: (newSize) {
-              setState(() {
-                _fontSize = newSize;
-              });
-            },
-            max: 200,
-            min: 20,
-          ),
-        ],
+            Slider(
+              value: _fontSize,
+              onChanged: (newSize) {
+                setState(() {
+                  _fontSize = newSize;
+                });
+              },
+              max: 200,
+              min: 20,
+            ),
+          ],
+        ),
       ),
     );
   }
