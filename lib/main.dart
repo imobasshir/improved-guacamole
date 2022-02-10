@@ -17,6 +17,7 @@ import 'package:flutter_test_application_1/pages/form.dart';
 import 'package:flutter_test_application_1/pages/json.dart';
 import 'package:flutter_test_application_1/pages/login_page.dart';
 import 'package:flutter_test_application_1/pages/next_page.dart';
+import 'package:flutter_test_application_1/save_data/main.dart';
 import 'package:flutter_test_application_1/tic_toc_toe/main.dart';
 import 'package:flutter_test_application_1/utils/routes.dart';
 import 'package:flutter_test_application_1/weather/weatherapi.dart';
@@ -42,7 +43,7 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark,
       ),
       routes: {
-        "/": (context) => const NewView(),
+        "/": (context) => const SaveData(),
         MyRoutes.home: (context) => const HomePage(),
         MyRoutes.loginRoute: (context) => const LoginPage(),
         MyRoutes.demo: (context) => const Demo(),
