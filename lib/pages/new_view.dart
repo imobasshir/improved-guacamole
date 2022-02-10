@@ -12,6 +12,28 @@ class NewView extends StatelessWidget {
           'Appbar',
         ),
         backgroundColor: const Color.fromARGB(188, 33, 149, 243),
+        actions: [
+          PopupMenuButton(
+            itemBuilder: (context) => <PopupMenuEntry>[
+              const PopupMenuItem(
+                child: ListTile(
+                  leading: Icon(Icons.menu),
+                  title: Text('Menu'),
+                ),
+              ),
+              const PopupMenuDivider(),
+              const PopupMenuItem(
+                child: Text('One'),
+              ),
+              const PopupMenuItem(
+                child: Text('Two'),
+              ),
+              const PopupMenuItem(
+                child: Text('Three'),
+              ),
+            ],
+          ),
+        ],
       ),
       body: ListView(
         children: [
