@@ -52,6 +52,8 @@ class MyApp extends StatelessWidget {
         MyRoutes.calc: (context) => const MyCalculator(),
         "/json": (context) => const LoadJson(),
         "/timePick": (context) => const TimePick(),
+        "/news": (context) => const NewsApiCall(),
+        "/weather": (context) => const WeatherApi(),
       },
     );
   }
