@@ -23,7 +23,7 @@ dependencies:
   webview_flutter: ^3.0.0
   carousel_slider: ^4.0.0
   shared_preferences: ^2.0.13
-  device_preview: ^1.0.0
+  # device_preview: ^1.0.0
 
 dev_dependencies:
   flutter_test:
