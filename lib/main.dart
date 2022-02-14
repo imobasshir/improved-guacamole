@@ -54,6 +54,7 @@ class MyApp extends StatelessWidget {
         "/timePick": (context) => const TimePick(),
         "/news": (context) => const NewsApiCall(),
         "/weather": (context) => const WeatherApi(),
+        "/save": (context) => const SaveData(),
       },
     );
   }
