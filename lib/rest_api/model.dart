@@ -2,11 +2,11 @@
 //
 //     final comment = commentFromJson(jsonString);
 
-import 'dart:convert';
+// import 'dart:convert';
 
-List<Comment> commentFromJson(String str) => List<Comment>.from(json.decode(str).map((x) => Comment.fromJson(x)));
+// List<Comment> commentFromJson(String str) => List<Comment>.from(json.decode(str).map((x) => Comment.fromJson(x)));
 
-String commentToJson(List<Comment> data) => json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
+// String commentToJson(List<Comment> data) => json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
 
 class Comment {
     Comment({
@@ -31,32 +31,32 @@ class Comment {
         body: json["body"],
     );
 
-    Map<String, dynamic> toJson() => {
-        "postId": postId,
-        "id": id,
-        "name": name,
-        "email": email,
-        "body": body,
-    };
+  //   Map<String, dynamic> toJson() => {
+  //       "postId": postId,
+  //       "id": id,
+  //       "name": name,
+  //       "email": email,
+  //       "body": body,
+  //   };
 
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
+  // @override
+  // bool operator ==(Object other) {
+  //   if (identical(this, other)) return true;
   
-    return other is Comment &&
-      other.postId == postId &&
-      other.id == id &&
-      other.name == name &&
-      other.email == email &&
-      other.body == body;
-  }
+  //   return other is Comment &&
+  //     other.postId == postId &&
+  //     other.id == id &&
+  //     other.name == name &&
+  //     other.email == email &&
+  //     other.body == body;
+  // }
 
-  @override
-  int get hashCode {
-    return postId.hashCode ^
-      id.hashCode ^
-      name.hashCode ^
-      email.hashCode ^
-      body.hashCode;
-  }
+  // @override
+  // int get hashCode {
+  //   return postId.hashCode ^
+  //     id.hashCode ^
+  //     name.hashCode ^
+  //     email.hashCode ^
+  //     body.hashCode;
+  // }
 }
